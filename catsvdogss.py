@@ -354,6 +354,7 @@ if add_selectbox == 'Interactive map':
                         hover_name="Location",
                         locationmode = 'USA-states',
                        color_continuous_scale=px.colors.sequential.Plasma)
+    
     fig6.update_layout(
         title_text = 'Number of pet Households',
         geo_scope='usa',
