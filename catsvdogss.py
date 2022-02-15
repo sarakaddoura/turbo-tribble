@@ -14,6 +14,7 @@ import plotly
 
 from PIL import Image
 image = Image.open('cats and dogs.jpeg')
+
 st.image(image)
 
 ### Title of the page
