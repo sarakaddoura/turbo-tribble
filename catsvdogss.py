@@ -13,7 +13,7 @@ import plotly
 ### Inserting an Image
 
 from PIL import Image
-image = 'https://github.com/sarakaddoura/turbo-tribble/blob/9eec0e64b8fd7583da574b911863ab4d3b10fed2/cats%20and%20dogs.jpeg'
+image = 'https://www.gannett-cdn.com/-mm-/8b15e053fba5438a91d1bff3d4704868a0ce7579/c=68-0-731-373/local/-/media/2018/05/10/USATODAY/usatsports/MotleyFool-TMOT-816b1ceb-0ece06e3.jpg?auto=webp&format=pjpg&width=1200'
 st.image(image)
 
 
