@@ -289,82 +289,82 @@ and cats owners from the total percentage of households with pets''')
 ### Interactive map
 
 if add_selectbox == 'Interactive map':
-    st.markdown(f'<h1 style="color:#337BFF;font-size:24px;">{"Interactive Map"}</h1>', unsafe_allow_html=True)
+        st.markdown(f'<h1 style="color:#337BFF;font-size:24px;">{"Interactive Map"}</h1>', unsafe_allow_html=True)
 
-    us_state_to_abbrev = {
+        us_state_to_abbrev = {
 
-        "Alabama": "AL",
-        "Arizona": "AZ",
-        "Arkansas": "AR",
-        "California": "CA",
-        "Colorado": "CO",
-        "Connecticut": "CT",
-        "Delaware": "DE",
-        "Florida": "FL",
-        "Georgia": "GA",
-        "Hawaii": "HI",
-        "Idaho": "ID",
-        "Illinois": "IL",
-        "Indiana": "IN",
-        "Iowa": "IA",
-        "Kansas": "KS",
-        "Kentucky": "KY",
-        "Louisiana": "LA",
-        "Maine": "ME",
-        "Maryland": "MD",
-        "Massachusetts": "MA",
-        "Michigan": "MI",
-        "Minnesota": "MN",
-        "Mississippi": "MS",
-        "Missouri": "MO",
-        "Montana": "MT",
-        "Nebraska": "NE",
-        "Nevada": "NV",
-        "New Hampshire": "NH",
-        "New Jersey": "NJ",
-        "New Mexico": "NM",
-        "New York": "NY",
-        "North Carolina": "NC",
-        "North Dakota": "ND",
-        "Ohio": "OH",
-        "Oklahoma": "OK",
-        "Oregon": "OR",
-        "Pennsylvania": "PA",
-        "Rhode Island": "RI",
-        "South Carolina": "SC",
-        "South Dakota": "SD",
-        "Tennessee": "TN",
-        "Texas": "TX",
-        "Utah": "UT",
-        "Vermont": "VT",
-        "Virginia": "VA",
-        "Washington": "WA",
-        "West Virginia": "WV",
-        "Wisconsin": "WI",
-        "Wyoming": "WY"
-    }
+            "Alabama": "AL",
+            "Arizona": "AZ",
+            "Arkansas": "AR",
+            "California": "CA",
+            "Colorado": "CO",
+            "Connecticut": "CT",
+            "Delaware": "DE",
+            "Florida": "FL",
+            "Georgia": "GA",
+            "Hawaii": "HI",
+            "Idaho": "ID",
+            "Illinois": "IL",
+            "Indiana": "IN",
+            "Iowa": "IA",
+            "Kansas": "KS",
+            "Kentucky": "KY",
+            "Louisiana": "LA",
+            "Maine": "ME",
+            "Maryland": "MD",
+            "Massachusetts": "MA",
+            "Michigan": "MI",
+            "Minnesota": "MN",
+            "Mississippi": "MS",
+            "Missouri": "MO",
+            "Montana": "MT",
+            "Nebraska": "NE",
+            "Nevada": "NV",
+            "New Hampshire": "NH",
+            "New Jersey": "NJ",
+            "New Mexico": "NM",
+            "New York": "NY",
+            "North Carolina": "NC",
+            "North Dakota": "ND",
+            "Ohio": "OH",
+            "Oklahoma": "OK",
+            "Oregon": "OR",
+            "Pennsylvania": "PA",
+            "Rhode Island": "RI",
+            "South Carolina": "SC",
+            "South Dakota": "SD",
+            "Tennessee": "TN",
+            "Texas": "TX",
+            "Utah": "UT",
+            "Vermont": "VT",
+            "Virginia": "VA",
+            "Washington": "WA",
+            "West Virginia": "WV",
+            "Wisconsin": "WI",
+            "Wyoming": "WY"
+        }
 
-    # invert the dictionary
-    abbrev_to_us_state = dict(map(reversed, us_state_to_abbrev.items()))
-    df['abbrev_to_us_state'] = abbrev_to_us_state
+        # invert the dictionary
+        abbrev_to_us_state = dict(map(reversed, us_state_to_abbrev.items()))
+        df['abbrev_to_us_state'] = abbrev_to_us_state
 
-    fig6 = px.choropleth(df,
-                        locations="abbrev_to_us_state",
-                        color="Number of Pet Households (in 1000)",
-                        hover_name="Location",
-                        locationmode = 'USA-states',
-                       color_continuous_scale=px.colors.sequential.Plasma)
-    
-    fig6.update_layout(
-        title_text = 'Number of pet Households',
-        geo_scope='usa',
-    )
+        fig6 = px.choropleth(df,
+                            locations="abbrev_to_us_state",
+                            color="Number of Pet Households (in 1000)",
+                            hover_name="Location",
+                            locationmode = 'USA-states',
+                           color_continuous_scale=px.colors.sequential.Plasma)
+        fig6.update_layout(
+            title_text = 'Number of pet Households',
+            geo_scope='usa',
+        )
 
-    fig6.show()
-    st.write(fig6)
-    st.text(''' The following Map explains the number of pet households in USA
-states and it is clear that California and Texas have the highest
-number of Households with pets''')
+        fig6.show()
+        st.write(fig6)
+        st.text(''' The following Map explains the number of pet households in USA
+        states and it is clear that California and Texas have the highest
+        number of Households with pets''')
+
 
 ### Animation
 
