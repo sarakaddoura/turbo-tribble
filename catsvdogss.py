@@ -1,6 +1,13 @@
 import streamlit as st
 import pandas as pd
 import numpy as np
+import scipy as sp
+from plotly.offline import download_plotlyjs, init_notebook_mode, iplot
+from plotly.graph_objs import *
+init_notebook_mode()
+import plotly.express as px
+import chart_studio.plotly as py
+import plotly.graph_objs as go
 import plotly
 
 ### Inserting an Image
